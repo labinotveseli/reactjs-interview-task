@@ -19,7 +19,7 @@ for a persistent experience.
 ## 📂 Project Structure
 
 <!-- prettier-ignore -->
-src/
+- src/
 ├── assets/
 │   └── images/
 │       └── icons/              # All SVG icons used throughout the UI
@@ -83,8 +83,14 @@ src/
 
 **All note and category actions are handled in NotesContext.jsx, including:**
 
-- addCategory, addNote, updateNote, deleteNote, selectCategory, selectNote,
-  enterCreateNoteMode, resetToCreateNote
+- addCategory,
+- addNote,
+- updateNote,
+- deleteNote,
+- selectCategory,
+- selectNote,
+- enterCreateNoteMode,
+- resetToCreateNote
 
 ### Local Storage: useLocalStorage.js
 
