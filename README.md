@@ -18,21 +18,50 @@ for a persistent experience.
 
 ## 📂 Project Structure
 
-src/ ├── assets/images/icons/ # All SVG icons used throughout the UI ├──
-components/ # React components grouped by functionality │ ├── CategoryList.jsx │
-├── CreateCategory.jsx │ ├── CreateNote.jsx │ ├── NoteForm.jsx │ ├──
-NotesList.jsx │ ├── NoteView.jsx │ └── SearchBar.jsx ├── context/ │ └──
-NotesContext.jsx # Global state and logic (categories, notes, selection) ├──
-hooks/ │ └── useLocalStorage.js # Custom hook to persist data to localStorage
-├── pages/ │ ├── App.jsx # Root application component │ ├── App.css # Global
-styling │ ├── index.css │ └── main.jsx # Vite entry point
+<!-- prettier-ignore -->
+src/
+├── assets/
+│   └── images/
+│       └── icons/              # All SVG icons used throughout the UI
+│           ├── cross-icon.svg
+│           ├── delete-icon.svg
+│           ├── down-arrow.svg
+│           ├── line-icon.svg
+│           ├── plus-icon.svg
+│           ├── right-arrow.svg
+│           └── tick-icon.svg
+│
+├── components/                 # React components grouped by functionality
+│   ├── CategoryList.jsx
+│   ├── CreateCategory.jsx
+│   ├── CreateNote.jsx
+│   ├── NoteForm.jsx
+│   ├── NotesList.jsx
+│   ├── NoteView.jsx
+│   └── SearchBar.jsx
+│
+├── context/
+│   └── NotesContext.jsx        # Global state and logic (categories, notes, etc.)
+│
+├── hooks/
+│   └── useLocalStorage.js      # Custom hook for localStorage persistence
+│
+├── pages/
+│   ├── App.jsx                 # Root application component
+│   ├── App.css                 # Global styling for App
+│   ├── index.css               # Base styling (reset or overrides)
+│   └── main.jsx                # Vite entry point
+│
+├── index.html                  # Main HTML template
+├── package.json                # Project dependencies and scripts
+└── vite.config.js              # Vite configuration
 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
 
-- **git clone https://github.com/your-username/reactjs-notes-app.git** **cd
-  reactjs-notes-app**
+- **https://github.com/labinotveseli/reactjs-interview-task/tree/labinot-veseli**
+- **cd reactjs-notes-app**
 
 ### 2. Install dependencies
 
@@ -82,4 +111,6 @@ styling │ ├── index.css │ └── main.jsx # Vite entry point
 
 - ESLint + Prettier
 
-⚖️ License This project is licensed under the MIT License.
+### ⚖️ License
+
+This project is licensed under the MIT License.
