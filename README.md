@@ -19,7 +19,8 @@ for a persistent experience.
 ## 📂 Project Structure
 
 <!-- prettier-ignore -->
-```src/
+```
+src/
 ├── assets/
 │   └── images/
 │       └── icons/              # All SVG icons used throughout the UI
