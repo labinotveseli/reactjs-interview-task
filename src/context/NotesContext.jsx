@@ -126,7 +126,7 @@ export const NotesProvider = ({ children }) => {
     )
 
     setSelectedNoteId(null)
-    setIsCreatingNote(true) // Optional UX: go back to creation mode after delete
+    setIsCreatingNote(true)
   }
 
   const updateNote = updatedNote => {
