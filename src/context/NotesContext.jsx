@@ -1,12 +1,7 @@
 /* eslint-disable indent */
 /* eslint-disable react/prop-types */
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState
-} from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 
 const initialState = {
   categories: [
@@ -46,12 +41,18 @@ const initialState = {
 const NotesContext = createContext()
 
 export const NotesProvider = ({ children }) => {
-  const [categories, setCategories] = useState(initialState.categories)
-  const [notes, setNotes] = useState(initialState.notes)
+  const [categories, setCategories] = useLocalStorage(
+    'notes-app-categories',
+    initialState.categories
+  )
+  const [notes, setNotes] = useLocalStorage(
+    'notes-app-notes',
+    initialState.notes
+  )
   const [selectedCategoryId, setSelectedCategoryId] = useState(null)
   const [selectedNoteId, setSelectedNoteId] = useState(null)
   const [searchTerm, setSearchTerm] = useState('')
-  const [isCreatingNote, setIsCreatingNote] = useState(true)
+  const [isCreatingNote, setIsCreatingNote] = useState(false)
 
   useEffect(() => {
     resetToCreateNote()
@@ -71,6 +72,10 @@ export const NotesProvider = ({ children }) => {
   const enterCreateNoteMode = () => {
     setIsCreatingNote(true)
     setSelectedNoteId(null)
+  }
+
+  const exitCreateNoteMode = () => {
+    setIsCreatingNote(false)
   }
 
   const resetToCreateNote = () => {
@@ -121,6 +126,7 @@ export const NotesProvider = ({ children }) => {
     )
 
     setSelectedNoteId(null)
+    setIsCreatingNote(true) // Optional UX: go back to creation mode after delete
   }
 
   const updateNote = updatedNote => {
@@ -159,6 +165,7 @@ export const NotesProvider = ({ children }) => {
         selectCategory,
         selectNote,
         enterCreateNoteMode,
+        exitCreateNoteMode,
         resetToCreateNote
       }}
     >

@@ -25,11 +25,13 @@ const NotesList = () => {
           onClick={() => selectNote(note.id)}
           data-testid={`note-item-${note.id}`}
         >
-          <div className='note-content'>
-            <Title level={5} className='note-title'>
-              {note.title}
-            </Title>
-            <Text className='note-preview'>{note.content}</Text>
+          <div className=''>
+            <div className='note-content'>
+              <Title level={5} className='note-title'>
+                {note.title}
+              </Title>
+              <Text className='note-preview'>{note.content}</Text>
+            </div>
           </div>
         </List.Item>
       )}

@@ -86,7 +86,7 @@ const NoteView = () => {
       </div>
 
       <div className='note-editor-footer custom-footer-buttons'>
-        <button className='delete-button'>
+        <button className='delete-button' onClick={handleDelete}>
           <span className='save-text'>Delete Note</span>
           <img src={lineIcon} alt='line' className='save-line delete-line' />
           <img src={deleteIcon} alt='delete' className='save-icon' />

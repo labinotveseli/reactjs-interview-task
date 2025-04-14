@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Input } from 'antd'
-import { CheckOutlined, CloseOutlined } from '@ant-design/icons'
 import { useNotes } from '../context/NotesContext'
 import plusIcon from '../assets/images/icons/plus-icon.svg'
 import lineIcon from '../assets/images/icons/line-icon.svg'
+import tickIcon from '../assets/images/icons/tick-icon.svg'
+import crossIcon from '../assets/images/icons/cross-icon.svg'
 
 const CreateCategory = () => {
   const [isCreating, setIsCreating] = useState(false)
@@ -38,7 +39,7 @@ const CreateCategory = () => {
             placeholder='Add a title...'
             value={categoryName}
             onChange={e => setCategoryName(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyPress}
             autoFocus
             className='category-input'
             data-testid='category-input'
@@ -48,14 +49,22 @@ const CreateCategory = () => {
             onClick={handleCreateCategory}
             data-testid='confirm-category-button'
           >
-            <CheckOutlined />
+            <img
+              src={tickIcon}
+              alt='confirm'
+              className='category-icon-button'
+            />
           </button>
           <button
             className='cancel-button'
             onClick={resetForm}
             data-testid='cancel-category-button'
           >
-            <CloseOutlined />
+            <img
+              src={crossIcon}
+              alt='cancel'
+              className='category-icon-button'
+            />
           </button>
         </div>
       ) : (

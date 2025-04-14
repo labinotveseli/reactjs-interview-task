@@ -17,7 +17,7 @@ const { Sider, Content } = Layout
 const MainContent = () => {
   const { selectedCategoryId, selectedNoteId, isCreatingNote } = useNotes()
 
-  if (!selectedCategoryId) {
+  if (!selectedCategoryId || (selectedCategoryId && isCreatingNote)) {
     return (
       <div className='main-right-panel'>
         <NoteForm />

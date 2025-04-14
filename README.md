@@ -1,12 +1,85 @@
-# React + Vite
+# 📝 ReactJS Notes App – Interview Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and user-friendly **note-taking application** built with **React
+19**, **Ant Design**, and **Vite**.  
+It allows users to create categories, manage notes, and save their data locally
+for a persistent experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Features
 
-## Expanding the ESLint configuration
+- ✅ **Create and manage categories**
+- ✍️ **Add, edit, and delete notes**
+- 🔍 **Search through notes**
+- 💾 **Data is saved to localStorage**
+- ⚡️ **Fast load times using Vite**
+- 🎨 **Clean UI with Ant Design**
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+src/ ├── assets/images/icons/ # All SVG icons used throughout the UI ├──
+components/ # React components grouped by functionality │ ├── CategoryList.jsx │
+├── CreateCategory.jsx │ ├── CreateNote.jsx │ ├── NoteForm.jsx │ ├──
+NotesList.jsx │ ├── NoteView.jsx │ └── SearchBar.jsx ├── context/ │ └──
+NotesContext.jsx # Global state and logic (categories, notes, selection) ├──
+hooks/ │ └── useLocalStorage.js # Custom hook to persist data to localStorage
+├── pages/ │ ├── App.jsx # Root application component │ ├── App.css # Global
+styling │ ├── index.css │ └── main.jsx # Vite entry point
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+- **git clone https://github.com/your-username/reactjs-notes-app.git** **cd
+  reactjs-notes-app**
+
+### 2. Install dependencies
+
+**npm install**
+
+### 3. Start the development server
+
+**npm run start** **Visit http://localhost:5173 in your browser.**
+
+### 4. Run Tests
+
+**npm run test**
+
+- Testing is set up using Jest and React Testing Library.
+
+### 5. How It Works
+
+### Global State: NotesContext
+
+**All note and category actions are handled in NotesContext.jsx, including:**
+
+- addCategory, addNote, updateNote, deleteNote, selectCategory, selectNote,
+  enterCreateNoteMode, resetToCreateNote
+
+### Local Storage: useLocalStorage.js
+
+📸 UI Screenshots Create Category & Note Note View & Edit
+
+### Scripts
+
+- Script Command Description
+- Start npm run start Start development server
+- Build npm run build Build app for production
+- Format Code npm run format Format with Prettier + ESLint
+- Lint npm run lint Run ESLint
+- Test npm run test Run tests
+
+### Tech Stack
+
+- React 19
+
+- Ant Design
+
+- Vite
+
+- Jest
+
+- ESLint + Prettier
+
+⚖️ License This project is licensed under the MIT License.
