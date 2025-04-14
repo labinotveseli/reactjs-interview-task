@@ -19,7 +19,7 @@ for a persistent experience.
 ## 📂 Project Structure
 
 <!-- prettier-ignore -->
-- src/
+```src/
 ├── assets/
 │   └── images/
 │       └── icons/              # All SVG icons used throughout the UI
@@ -55,6 +55,7 @@ for a persistent experience.
 ├── index.html                  # Main HTML template
 ├── package.json                # Project dependencies and scripts
 └── vite.config.js              # Vite configuration
+```
 
 ## 🚀 Getting Started
 
