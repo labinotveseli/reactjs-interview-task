@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Input, Button, Empty } from 'antd'
+import { Input, Empty } from 'antd'
 import tickIcon from '../assets/images/icons/tick-icon.svg'
 import deleteIcon from '../assets/images/icons/delete-icon.svg'
 import lineIcon from '../assets/images/icons/line-icon.svg'

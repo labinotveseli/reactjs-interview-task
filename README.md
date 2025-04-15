@@ -1,11 +1,8 @@
 # 📝 ReactJS Notes App – Interview Task
 
-A lightweight and user-friendly **note-taking application** built with **React
-19**, **Ant Design**, and **Vite**.  
-It allows users to create categories, manage notes, and save their data locally
-for a persistent experience.
-
----
+**A lightweight and user-friendly _note-taking application_ built with
+_React19_, _Ant Design_, and _Vite_. It allows users to create categories,
+manage notes, and save their data locally for a persistent experience.**
 
 ## 🔧 Features
 
@@ -71,7 +68,11 @@ src/
 
 ### 3. Start the development server
 
-**npm run start** **Visit http://localhost:5173 in your browser.**
+**npm run start**
+
+#### By default, the app will launch at **http://localhost:1000** and be accessible
+
+on your local network (e.g. 192.168.x.x:1000), thanks to vite.config.js:
 
 ### 4. Run Tests
 
@@ -79,7 +80,7 @@ src/
 
 - Testing is set up using Jest and React Testing Library.
 
-### 5. How It Works
+## 5. How It Works
 
 ### Global State: NotesContext
 
@@ -94,18 +95,26 @@ src/
 - enterCreateNoteMode,
 - resetToCreateNote
 
-### Local Storage: useLocalStorage.js
+### Architecture Notes
 
-📸 UI Screenshots Create Category & Note Note View & Edit
+**NotesContext (Global State) through ContextAPI**
 
-### Scripts
+- Handles the entire logic and state
+- Adding / selecting / deleting notes and categories Switching between note
+  views and edit modes
+- Persists to localStorage via useLocalStorage.js **useLocalStorage Hook**
+- Encapsulates saving and retrieving notes/categories using localStorage API.
 
-- Script Command Description
-- Start npm run start Start development server
-- Build npm run build Build app for production
-- Format Code npm run format Format with Prettier + ESLint
-- Lint npm run lint Run ESLint
-- Test npm run test Run tests
+### Available Scripts
+
+- _Start:_ npm run start Launches development server on port _1000_
+- _Dev:_ Alias npm run dev Same as start (includes ESLint)
+- _Build:_ npm run build Builds the app for production
+- _Preview:_ npm run preview Previews the built version
+- _Format:_ npm run format Runs Prettier + ESLint auto-fix
+- _Lint:_ npm run lint Lints code using ESLint
+- _Test:_ npm run test Runs unit tests
+- _Watch Tests:_ npm run test:watch Re-runs tests on file changes
 
 ### Tech Stack
 
@@ -115,7 +124,7 @@ src/
 
 - Vite
 
-- Jest
+- Jest + @testing-library/react
 
 - ESLint + Prettier
 

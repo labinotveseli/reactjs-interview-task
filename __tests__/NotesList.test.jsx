@@ -1,3 +1,4 @@
+import React from 'react'
 import { render } from '@testing-library/react'
 import NotesList from '../src/components/NotesList'
 import { NotesProvider } from '../src/context/NotesContext'

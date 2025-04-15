@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Input, Button } from 'antd'
+import { Input } from 'antd'
 import tickIcon from '../assets/images/icons/tick-icon.svg'
 import lineIcon from '../assets/images/icons/line-icon.svg'
 import { useNotes } from '../context/NotesContext'

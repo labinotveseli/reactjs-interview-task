@@ -9,6 +9,7 @@ import SearchBar from './components/SearchBar'
 import CreateCategory from './components/CreateCategory'
 import CreateNote from './components/CreateNote'
 import NoteForm from './components/NoteForm'
+
 import 'antd/dist/reset.css'
 import './App.css'
 

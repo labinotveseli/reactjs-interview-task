@@ -1,2 +1,1 @@
-const mock = 'svg-mock'
-export default mock
+module.exports = 'test-file-stub'

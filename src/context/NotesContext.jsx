@@ -1,7 +1,7 @@
 /* eslint-disable indent */
-/* eslint-disable react/prop-types */
-import React, { createContext, useContext, useEffect, useState } from 'react'
-import { useLocalStorage } from '../hooks/useLocalStorage'
+import React from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { useLocalStorage } from '../hooks/useLocalStorage.js'
 
 const initialState = {
   categories: [

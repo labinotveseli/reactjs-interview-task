@@ -1,3 +1,4 @@
+import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import NoteForm from '../src/components/NoteForm'
 import { NotesProvider } from '../src/context/NotesContext'
