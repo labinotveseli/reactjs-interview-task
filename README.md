@@ -15,7 +15,22 @@
 
 <!-- prettier-ignore -->
 ```
+__mocks__/                          # Manual mocks
+__tests__/                          # All Jest tests per component
+public/                             # Public assets (favicon, etc.)
+screenshots/                        # Screenshots (optional for docs/preview)
 src/
+├── assets/
+│   └── images/
+│       └── icons/              # All SVG icons used throughout the UI
+│           ├── cross-icon.svg
+│           ├── delete-icon.svg
+│           ├── down-arrow.svg
+│           ├── line-icon.svg
+│           ├── plus-icon.svg
+│           ├── right-arrow.svg
+│           └── tick-icon.svg
+│
 ├── components/                   # Functional UI components
 │   ├── CategoryList.jsx
 │   ├── CreateCategory.jsx
@@ -51,16 +66,16 @@ package.json                     # Scripts, dependencies, etc.
 
 ### 1. Clone the repository
 
-- **https://github.com/labinotveseli/reactjs-interview-task/tree/labinot-veseli**
-- **cd reactjs-notes-app**
+- `https://github.com/labinotveseli/reactjs-interview-task/tree/labinot-veseli`
+- `cd reactjs-notes-app`
 
 ### 2. Install dependencies
 
-**npm install**
+`npm install`
 
 ### 3. Start the development server
 
-**npm run start**
+`npm run start`
 
 #### By default, the app will launch at **http://localhost:1000** and be accessible on your local network (e.g. 192.168.x.x:1000), thanks to vite.config.js:
 
@@ -74,7 +89,9 @@ server: {
 
 ### 4. Run Tests
 
-**npm run test**
+#### `npm run test` - Runs all test suites once using Jest and React Testing Library.
+
+#### `npm run test:watch` - For test-driven development (TDD) or live feedback
 
 - Testing is set up using Jest and React Testing Library.
 
@@ -82,50 +99,49 @@ server: {
 
 ### Global State: NotesContext
 
-**All note and category actions are handled in NotesContext.jsx, including:**
+##### All note and category actions are handled in NotesContext.jsx, including:
 
-- addCategory,
-- addNote,
-- updateNote,
-- deleteNote,
-- selectCategory,
-- selectNote,
-- enterCreateNoteMode,
-- resetToCreateNote
+- `addCategory,`
+- `addNote,`
+- `updateNote,`
+- `deleteNote,`
+- `selectCategory,`
+- `selectNote,`
+- `enterCreateNoteMode,`
+- `resetToCreateNote`
 
 ### Architecture Notes
 
-**NotesContext (Global State) through ContextAPI**
+#### NotesContext (Global State) through ContextAPI
 
-- Handles the entire logic and state
-- Adding / selecting / deleting notes and categories Switching between note
-  views and edit modes
-- Persists to localStorage via useLocalStorage.js **useLocalStorage Hook**
-- Encapsulates saving and retrieving notes/categories using localStorage API.
+- `Handles the entire logic and state`
+- `Adding / selecting / deleting notes and categories Switching between note views and edit modes`
+- `Persists to localStorage via useLocalStorage.js, useLocalStorage Hook`
+- `Encapsulates saving and retrieving notes/categories using localStorage API.`
 
 ### Available Scripts
 
-- _Start:_ npm run start Launches development server on port _1000_
-- _Dev:_ Alias npm run dev Same as start (includes ESLint)
-- _Build:_ npm run build Builds the app for production
-- _Preview:_ npm run preview Previews the built version
-- _Format:_ npm run format Runs Prettier + ESLint auto-fix
-- _Lint:_ npm run lint Lints code using ESLint
-- _Test:_ npm run test Runs unit tests
-- _Watch Tests:_ npm run test:watch Re-runs tests on file changes
+- `Start:` `npm run start` : Launches development server on port _1000_
+- `Dev:` `npm run dev` : Same as start (includes ESLint)
+- `Build:` `npm run build` : Builds the app for production
+- `Preview:` `npm run preview` : Previews the built version
+- `Format:` `npm run format` : Runs Prettier + ESLint auto-fix
+- `Lint:` `npm run lint` : Lints code using ESLint
+- `Test:` `npm run test` : Runs unit tests
+- `Watch Tests:` `npm run test:watch` : Re-runs tests on file changes
 
 ### Tech Stack
 
-- React 19
+- `React 19`
 
-- Ant Design
+- `Ant Design`
 
-- Vite
+- `Vite`
 
-- Jest + @testing-library/react
+- `Jest + @testing-library/react`
 
-- ESLint + Prettier
+- `ESLint + Prettier`
 
 ### ⚖️ License
 
-This project is licensed under the MIT License.
+`This project is licensed under the MIT License.`
