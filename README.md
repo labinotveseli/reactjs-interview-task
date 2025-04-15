@@ -1,8 +1,6 @@
 # 📝 ReactJS Notes App – Interview Task
 
-**A lightweight and user-friendly _note-taking application_ built with
-_React19_, _Ant Design_, and _Vite_. It allows users to create categories,
-manage notes, and save their data locally for a persistent experience.**
+#### A lightweight and user-friendly note-taking application built with `React19`, `Ant Design`, `ContextAPI`, and `Vite`. It allows users to create categories, manage notes, and save their data locally for a persistent experience.
 
 ## 🔧 Features
 
@@ -70,9 +68,15 @@ src/
 
 **npm run start**
 
-#### By default, the app will launch at **http://localhost:1000** and be accessible
+#### By default, the app will launch at **http://localhost:1000** and be accessible on your local network (e.g. 192.168.x.x:1000), thanks to vite.config.js:
 
-on your local network (e.g. 192.168.x.x:1000), thanks to vite.config.js:
+```
+server: {
+  port: 1000,
+  host: true,
+  open: true,
+}
+```
 
 ### 4. Run Tests
 
