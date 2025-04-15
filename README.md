@@ -16,18 +16,7 @@
 <!-- prettier-ignore -->
 ```
 src/
-├── assets/
-│   └── images/
-│       └── icons/              # All SVG icons used throughout the UI
-│           ├── cross-icon.svg
-│           ├── delete-icon.svg
-│           ├── down-arrow.svg
-│           ├── line-icon.svg
-│           ├── plus-icon.svg
-│           ├── right-arrow.svg
-│           └── tick-icon.svg
-│
-├── components/                 # React components grouped by functionality
+├── components/                   # Functional UI components
 │   ├── CategoryList.jsx
 │   ├── CreateCategory.jsx
 │   ├── CreateNote.jsx
@@ -36,21 +25,26 @@ src/
 │   ├── NoteView.jsx
 │   └── SearchBar.jsx
 │
-├── context/
-│   └── NotesContext.jsx        # Global state and logic (categories, notes, etc.)
+├── context/                     # Global Context (React Context API)
+│   └── NotesContext.jsx
 │
-├── hooks/
-│   └── useLocalStorage.js      # Custom hook for localStorage persistence
+├── hooks/                       # Custom reusable hooks
+│   └── useLocalStorage.js
 │
-├── pages/
-│   ├── App.jsx                 # Root application component
-│   ├── App.css                 # Global styling for App
-│   ├── index.css               # Base styling (reset or overrides)
-│   └── main.jsx                # Vite entry point
+├── App.jsx                      # Root App component
+├── App.css                      # Main app styles
+├── index.css                    # Global resets
+├── main.jsx                     # App entry (ReactDOM rendering)
 │
-├── index.html                  # Main HTML template
-├── package.json                # Project dependencies and scripts
-└── vite.config.js              # Vite configuration
+index.html                       # Vite HTML entry template
+jest.config.js                   # Jest unit testing config
+jest.setup.js                    # Jest testing environment setup
+vite.config.js                   # Vite config (port 1000 + LAN access)
+.babelrc                         # Babel transpilation config
+.eslintrc / eslint.config.mjs    # ESLint rules
+.prettierrc                      # Prettier formatting rules
+package.json                     # Scripts, dependencies, etc.
+
 ```
 
 ## 🚀 Getting Started
