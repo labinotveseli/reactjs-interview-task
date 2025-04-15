@@ -93,8 +93,6 @@ server: {
 
 #### `npm run test:watch` - For test-driven development (TDD) or live feedback
 
-- Testing is set up using Jest and React Testing Library.
-
 ## 5. How It Works
 
 ### Global State: NotesContext
