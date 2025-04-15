@@ -67,7 +67,7 @@ package.json                     # Scripts, dependencies, etc.
 ### 1. Clone the repository
 
 - `https://github.com/labinotveseli/reactjs-interview-task/tree/labinot-veseli`
-- `cd reactjs-notes-app`
+- `cd reactjs-interview-task`
 
 ### 2. Install dependencies
 
